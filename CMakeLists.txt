@@ -4,7 +4,7 @@ project(clox)
 include(CTest)
 enable_testing()
 
-file(GLOB SOURCES *.c)
+file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/*.c)
 
 add_executable(clox ${SOURCES})
 
