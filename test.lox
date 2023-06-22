@@ -1,31 +1,14 @@
-class Zoo {
-  init() {
-    this.aardvark = 1;
-    this.baboon   = 1;
-    this.cat      = 1;
-    this.donkey   = 1;
-    this.elephant = 1;
-    this.fox      = 1;
+var idx = 0;
+var loop = 0;
+while (idx < 10) {
+  // continue returns to here
+  loop = loop + 1;
+  if (idx == 2) {
+    idx = idx + 5;
+    continue;
   }
-  ant()    { return this.aardvark; }
-  banana() { return this.baboon; }
-  tuna()   { return this.cat; }
-  hay()    { return this.donkey; }
-  grass()  { return this.elephant; }
-  mouse()  { return this.fox; }
+  idx = idx + 1;
 }
 
-var zoo = Zoo();
-var sum = 0;
-var start = clock();
-while (sum < 100000000) {
-  sum = sum + zoo.ant()
-            + zoo.banana()
-            + zoo.tuna()
-            + zoo.hay()
-            + zoo.grass()
-            + zoo.mouse();
-}
-
-print clock() - start;
-print sum;
+print idx;  // 10
+print loop; // 6
